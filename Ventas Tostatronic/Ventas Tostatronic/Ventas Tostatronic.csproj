@@ -48,6 +48,8 @@
 
 	<ItemGroup>
 		<PackageReference Include="Telerik.UI.for.Maui" Version="5.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="RestSharp" Version="108.0.3" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -60,6 +62,13 @@
 	  <None Remove="MVVM\Menu\MenuCommands\" />
 	  <None Remove="Views\" />
 	  <None Remove="Views\SalesVF\" />
+	  <None Remove="MVVM\SalesVMF\" />
+	  <None Remove="MVVM\SalesVMF\SaleCommands\" />
+	  <None Remove="Newtonsoft.Json" />
+	  <None Remove="RestSharp" />
+	  <None Remove="Models\Clients\" />
+	  <None Remove="Models\ProductsMFF\" />
+	  <None Remove="Models\SalesMF\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="MVVM\" />
@@ -70,6 +79,11 @@
 	  <Folder Include="MVVM\Menu\MenuCommands\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="Views\SalesVF\" />
+	  <Folder Include="MVVM\SalesVMF\" />
+	  <Folder Include="MVVM\SalesVMF\SaleCommands\" />
+	  <Folder Include="Models\Clients\" />
+	  <Folder Include="Models\ProductsMFF\" />
+	  <Folder Include="Models\SalesMF\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\ventasmenu.png" />

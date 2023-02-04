@@ -2,11 +2,64 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ventas_Tostatronic.Views.SalesVF.SaleV"
-             Title="SaleV">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="Ventas"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui">
+
+        <telerik:RadBusyIndicator x:Name="busyIndicator"
+                                  IsBusy="{Binding GettingData}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <telerik:RadButton x:Name="btnclient"
+                                   Text="Seleccionar cliente..."
+                                   TextColor="#1976D2"
+                                   Background="White"
+                                   BorderColor="#1976D2"
+                                   BorderThickness="2"
+                                   Grid.Row="0"
+                                   IsVisible="{Binding SearClientButton}"
+                                   Margin="5"
+                                   Command="{Binding AllowSearchClientCommand}"/>
+        
+                <telerik:RadAutoComplete x:Name="txtAutoComplete"
+                                         Grid.Row="0"
+                                         Margin="5"
+                                         Placeholder="Escriba Nombre o RFC de Cliente"
+                                         IsVisible="{Binding SearClientVisibility}"
+                                         ItemsSource="{Binding Clients}"
+                                         TextSearchPath="SerachProperty"
+                                         CompletionMode="Contains"
+                                         SuggestionItemSelected="txtAutoComplete_SuggestionItemSelected"/>
+                
+                <telerik:RadComboBox x:Name="cmbPriceType"
+                                     SelectedIndex="{Binding CompleteSale.PriceType, Mode=TwoWay}"
+                                     IsVisible="{Binding SeeSaleControls, Mode=TwoWay}"
+                                     Grid.Row="1"
+                                     Margin="5">
+                    <telerik:RadComboBox.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Precio Publico</x:String>
+                            <x:String>Precio Distribuidor</x:String>
+                            <x:String>Precio Minimo</x:String>
+                        </x:Array>
+                    </telerik:RadComboBox.ItemsSource>
+                </telerik:RadComboBox>
+                <telerik:RadAutoComplete x:Name="txtProducts"
+                                         Grid.Row="2"
+                                         Margin="5"
+                                         Placeholder="Escriba Nombre o código de producto"
+                                         IsVisible="{Binding SeeSaleControls}"
+                                         ItemsSource="{Binding CompleteSale.SearchedProducts}"
+                                         TextSearchPath="SearchProperty"
+                                         CompletionMode="Contains"/>
+        
+            </Grid>
+        </telerik:RadBusyIndicator>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿using System;
 using Ventas_Tostatronic.Models.MenuMFF;
 using Ventas_Tostatronic.Services;
+using Ventas_Tostatronic.Views.SalesVF;
 
 namespace Ventas_Tostatronic.MVVM.Menu
 {
@@ -27,7 +28,8 @@ namespace Ventas_Tostatronic.MVVM.Menu
                 SetValue(ref selectedOption, value);
                 if(SelectedOption!= null)
                 {
-                    new Action(async () => await DisplayMessage("Prueba",SelectedOption.Name))();
+                    if(SelectedOption.Name.Equals("Ventas"))
+                        new Action(async () => await pageService.PushAsync(new SaleV(new PageService())))();
                 }
             }
         }

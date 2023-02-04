@@ -78,6 +78,14 @@
               "version": "[7.0.58, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
             "Telerik.UI.for.Maui": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -196,6 +204,14 @@
               "version": "[7.0.58, )",
               "autoReferenced": true
             },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
             "Telerik.UI.for.Maui": {
               "target": "Package",
               "version": "[5.0.0, )"
@@ -258,6 +274,14 @@
               "target": "Package",
               "version": "[7.0.58, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.2, )"
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
             },
             "Telerik.UI.for.Maui": {
               "target": "Package",
