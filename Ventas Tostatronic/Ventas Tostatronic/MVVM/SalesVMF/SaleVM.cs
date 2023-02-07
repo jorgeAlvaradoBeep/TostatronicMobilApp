@@ -74,6 +74,19 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
             }
         }
 
+        bool searchResultListDisplay;
+        public bool SearchResultListDisplay
+        {
+            get
+            {
+                return searchResultListDisplay;
+            }
+            set
+            {
+                SetValue(ref searchResultListDisplay, value);
+            }
+        }
+
         private ObservableCollection<ClientComplete> clientes;
 
         public ObservableCollection<ClientComplete> Clients
@@ -83,7 +96,61 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
         }
         public CompleteSaleM CompleteSale { get; set; }
 
+        string searchPredictionText;
+        public string SearchPredictionText
+        {
+            get
+            {
+                return searchPredictionText;
+            }
+            set
+            {
+                SetValue(ref searchPredictionText, value);
+                if(!string.IsNullOrEmpty(SearchPredictionText))
+                {
+                    SearchResultListDisplay = true;
+                    getSearchedCoincidences();
+                }
+                else
+                {
+                    SearchResultList = new List<SaleProduct>();
+                    SearchResultListDisplay = false;
+                }
+            }
+        }
 
+        List<SaleProduct> searchResultList;
+        public List<SaleProduct> SearchResultList
+        {
+            get
+            {
+                return searchResultList;
+            }
+            set
+            {
+                SetValue(ref searchResultList, value);
+            }
+        }
+        SaleProduct selectedProduct;
+        public SaleProduct SelectedProduct
+        {
+            get
+            {
+                return selectedProduct;
+            }
+            set
+            {
+                SetValue(ref selectedProduct, value);
+                if(SelectedProduct!= null)
+                {
+                    if (string.IsNullOrEmpty(SelectedProduct.nombre))
+                        return;
+                    CompleteSale.SaledProducts.Add(SelectedProduct);
+                    //SelectedProduct = null;
+                    SearchPredictionText = string.Empty;
+                }
+            }
+        }
         #endregion
 
         #region PropertyCommands
@@ -97,10 +164,12 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
             SearClientVisibility = false;
             SeeSaleControls = false;
             ActivateSaleControls = false;
+            SearchResultListDisplay = false;
             SearClientButton = true;
             AllowSearchClientCommand = new AllowSearchClientCommand(this);
             UpdateProductsInfoCommand = new UpdateProductsInfoCommand(this);
             CompleteSale = new CompleteSaleM();
+            SearchResultList = new List<SaleProduct>();
             CompleteSale.PriceType = 2;
             CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();
             CompleteSale.SearchedProducts = new List<SaleProduct>();
@@ -143,6 +212,19 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
             }
             SeeSaleControls = true;
             GettingData = false;
+        }
+
+        void getSearchedCoincidences()
+        {
+            List<SaleProduct> aux = new List<SaleProduct>();
+            if (CompleteSale.SearchedProducts!=null)
+            {
+                if(CompleteSale.SearchedProducts.Count>0)
+                {
+                    aux = CompleteSale.SearchedProducts.Where(a => a.nombre.ToLower().Contains(SearchPredictionText.ToLower()) || a.codigo.ToLower().Contains(SearchPredictionText.ToLower())).ToList();
+                    SearchResultList = aux;
+                }
+            }
         }
     }
 }

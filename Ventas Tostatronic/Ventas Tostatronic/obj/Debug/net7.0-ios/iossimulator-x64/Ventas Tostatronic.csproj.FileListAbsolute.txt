@@ -10,6 +10,8 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/Microsoft.Extensions.Options.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/Microsoft.Extensions.Primitives.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/Microsoft.Maui.Graphics.dll
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/Newtonsoft.Json.dll
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/RestSharp.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/SkiaSharp.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/SkiaSharp.Views.iOS.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/bin/Debug/net7.0-ios/iossimulator-x64/SkiaSharp.Views.Maui.Controls.dll
@@ -263,6 +265,7 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot@2x.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/dotnet_bot@3x.png
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/Resources/reload.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash@2x.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-ios/iossimulator-x64/resizetizer/r/splash@3x.png

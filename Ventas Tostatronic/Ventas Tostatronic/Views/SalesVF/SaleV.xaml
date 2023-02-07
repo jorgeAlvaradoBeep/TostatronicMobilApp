@@ -54,13 +54,10 @@
                 </telerik:RadComboBox>
                 <HorizontalStackLayout Grid.Row="2"
                                        IsVisible="{Binding ActivateSaleControls}">
-                    <telerik:RadAutoComplete x:Name="txtProducts"
-                                             Margin="5"
-                                             Placeholder="Escriba Nombre o código de producto"
-                                             ItemsSource="{Binding CompleteSale.SearchedProducts}"
-                                             TextSearchPath="SearchProperty"
-                                             CompletionMode="Contains"
-                                             SuggestionItemSelected="txtProducts_SuggestionItemSelected"/>
+                    <telerik:RadEntry x:Name="txtProducts"
+                                      Margin="5"
+                                      Placeholder="Escriba Nombre o código de producto"
+                                      Text="{Binding SearchPredictionText, Mode=TwoWay}"/>
                     <ImageButton x:Name="btnUpdateProduct"
                                  Margin="5"
                                  CornerRadius="3"
@@ -85,7 +82,6 @@
                         </VisualStateManager.VisualStateGroups>
                     </ImageButton>
                 </HorizontalStackLayout>
-                
                 <telerik:RadListView x:Name="lstSaledProducts"
                                      ItemsSource="{Binding CompleteSale.SaledProducts}"
                                      Grid.Row="3">
@@ -141,6 +137,66 @@
                                                    FontAttributes="Italic"
                                                    TextColor="Gray"
                                                    VerticalTextAlignment="Center"/>
+                                        </HorizontalStackLayout>
+                                    </Grid>
+                                </telerik:ListViewTemplateCell.View>
+                            </telerik:ListViewTemplateCell>
+                        </DataTemplate>
+                    </telerik:RadListView.ItemTemplate>
+                </telerik:RadListView>
+            <telerik:RadListView x:Name="lstSearchResults"
+                                     IsVisible="{Binding SearchResultListDisplay}"
+                                     ItemsSource="{Binding SearchResultList}"
+                                     Grid.Row="3"
+                                     MaximumHeightRequest="300"
+                                     SelectionMode="Single"
+                                     SelectionGesture="Tap"
+                                     Margin="5"
+                                     ItemTapped="lstSearchResults_ItemTapped"
+                                     Opacity="0.8">
+                    <telerik:RadListView.SelectedItemStyle>
+                        <telerik:ListViewItemStyle BackgroundColor="#03A9F4" 
+                                                   BorderColor="#448AFF" />
+                    </telerik:RadListView.SelectedItemStyle>
+                    <telerik:RadListView.ItemTemplate>
+                        <DataTemplate>
+                            <telerik:ListViewTemplateCell>
+                                <telerik:ListViewTemplateCell.View>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <HorizontalStackLayout Margin="10, 10, 10, 0">
+                                            <Label Text="{Binding nombre}"
+                                                   FontSize="16"
+                                                   FontAttributes="Bold"
+                                                   TextColor="Black"
+                                                   VerticalOptions="Center" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout Grid.Row="1"
+                                                               Margin="10, 0, 10, 10">
+                                            <Label Text="{Binding codigo}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
+                                        </HorizontalStackLayout>
+                                        <HorizontalStackLayout Grid.Row="2"
+                                                               Margin="10, 0, 10, 10">
+                                            <Label Text=" Existencias: "
+                                                   FontSize="13"
+                                                   FontAttributes="Bold"
+                                                   TextColor="Gray" />
+                                            <Label Text="{Binding existencia}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
+                                            <Label Text="{Binding DisplayPrice, StringFormat='{} Precio: {0:c}'}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
                                         </HorizontalStackLayout>
                                     </Grid>
                                 </telerik:ListViewTemplateCell.View>

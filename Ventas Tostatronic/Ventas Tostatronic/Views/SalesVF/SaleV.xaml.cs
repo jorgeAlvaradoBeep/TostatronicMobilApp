@@ -31,6 +31,10 @@ public partial class SaleV : ContentPage
             
     }
 
+
+    //Esta sección es del control de autocomplete text box. Se modifica por una versión con un despliegue de
+    //sugerencias con mejor visualización que inluya nombre, código y precio actual.
+    /*
     async void txtProducts_SuggestionItemSelected(System.Object sender, Telerik.Maui.Controls.AutoComplete.SuggestionItemSelectedEventArgs e)
     {
         SaleProduct sP = (SaleProduct)e.DataItem;
@@ -48,10 +52,27 @@ public partial class SaleV : ContentPage
             }
                 
         }
-    }
+    }*/
 
     void txtCantidad_ValueChanged(System.Object sender, Telerik.Maui.Controls.NumericInput.ValueChangedEventArgs e)
     {
         vm.CompleteSale.GetSubtotal();
+    }
+
+    async void lstSearchResults_ItemTapped(System.Object sender, Telerik.Maui.Controls.Compatibility.DataControls.ListView.ItemTapEventArgs e)
+    {
+        SaleProduct sP = (SaleProduct)e.Item;
+        if(sP!=null)
+        {
+            if (vm.CompleteSale.SaledProducts.Contains(sP))
+                await ps.DisplayAlert("Error", $"Producto: {sP.nombre} ya se encuentra agregado.", "OK");
+            else
+            {
+                sP.cantidadComprada = 1;
+                vm.CompleteSale.SaledProducts.Add(sP);
+                vm.CompleteSale.GetSubtotal();
+                vm.SearchPredictionText = string.Empty;
+            }
+        }
     }
 }

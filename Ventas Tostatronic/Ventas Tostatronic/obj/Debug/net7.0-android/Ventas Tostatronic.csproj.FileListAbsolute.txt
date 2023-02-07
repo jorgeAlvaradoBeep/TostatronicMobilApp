@@ -30,6 +30,7 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable-xxhdpi/splash.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/dotnet_bot.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable-xxxhdpi/splash.png
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable/reload.png
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon.xml
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/mipmap-anydpi-v26/appicon_round.xml
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/mipmap-hdpi/appicon.png
@@ -160,6 +161,8 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/Mono.Android.pdb
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/mscorlib.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/netstandard.dll
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/Newtonsoft.Json.dll
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/RestSharp.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/SkiaSharp.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/SkiaSharp.pdb
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/SkiaSharp.Views.Android.dll
@@ -1174,6 +1177,3 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/stamp/_GenerateJavaStubs.stamp
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/stamp/_GeneratePackageManagerJava.stamp
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
-/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/Newtonsoft.Json.dll
-/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/RestSharp.dll
-/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable/reload.png
