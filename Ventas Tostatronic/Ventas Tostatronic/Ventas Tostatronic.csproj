@@ -69,6 +69,7 @@
 	  <None Remove="Models\Clients\" />
 	  <None Remove="Models\ProductsMFF\" />
 	  <None Remove="Models\SalesMF\" />
+	  <None Remove="Resources\Images\reload.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="MVVM\" />
@@ -88,6 +89,7 @@
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\ventasmenu.png" />
 	  <BundleResource Include="Resources\Images\ventasmenu.png" />
+	  <BundleResource Include="Resources\Images\reload.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Remove="Resources\Images\ventasmenu.png" />

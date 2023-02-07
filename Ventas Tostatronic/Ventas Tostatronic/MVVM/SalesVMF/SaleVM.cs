@@ -61,6 +61,19 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
                 SetValue(ref seeSaleControls, value);
             }
         }
+        bool activateSaleControls;
+        public bool ActivateSaleControls
+        {
+            get
+            {
+                return activateSaleControls;
+            }
+            set
+            {
+                SetValue(ref activateSaleControls, value);
+            }
+        }
+
         private ObservableCollection<ClientComplete> clientes;
 
         public ObservableCollection<ClientComplete> Clients
@@ -75,19 +88,25 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
 
         #region PropertyCommands
         public AllowSearchClientCommand AllowSearchClientCommand { get; set; }
+        public UpdateProductsInfoCommand UpdateProductsInfoCommand { get; set; }
         #endregion
         public SaleVM(PageService ps)
         {
             pageService = ps;
             GettingData = false;
             SearClientVisibility = false;
+            SeeSaleControls = false;
+            ActivateSaleControls = false;
             SearClientButton = true;
             AllowSearchClientCommand = new AllowSearchClientCommand(this);
+            UpdateProductsInfoCommand = new UpdateProductsInfoCommand(this);
             CompleteSale = new CompleteSaleM();
             CompleteSale.PriceType = 2;
-            
+            CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();
+            CompleteSale.SearchedProducts = new List<SaleProduct>();
             new Action(async () => await getClients())();
-            SeeSaleControls = false;
+            new Action(async () => await getProducts())();
+            
         }
 
         async Task getClients()

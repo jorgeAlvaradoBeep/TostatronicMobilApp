@@ -1176,3 +1176,4 @@
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/stamp/_ResolveLibraryProjectImports.stamp
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/Newtonsoft.Json.dll
 /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/android/assets/RestSharp.dll
+/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-android/resizetizer/r/drawable/reload.png

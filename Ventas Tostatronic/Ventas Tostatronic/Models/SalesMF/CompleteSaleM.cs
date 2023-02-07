@@ -25,7 +25,6 @@ namespace Ventas_Tostatronic.Models.SalesMF
                         PriceType = 0;
                         break;
                 }
-
             }
         }
         private int priceType;
@@ -35,63 +34,65 @@ namespace Ventas_Tostatronic.Models.SalesMF
             get { return priceType; }
             set
             {
-                if (priceType.Equals(value))
+                if (value == PriceType)
                     return;
                 SetValue(ref priceType, value);
-                return;
-                if (SearchedProducts.Count > 0)
+                if(SearchedProducts!=null)
                 {
-                    foreach (SaleProduct product in SearchedProducts)
+                    if (SearchedProducts.Count > 0)
                     {
-                        product.DisplayPrice = product.precioPublico;
-                    }
-                    switch (PriceType)
-                    {
-                        case 0:
-                            foreach (SaleProduct product in SearchedProducts)
-                            {
-                                product.DisplayPrice = product.precioMinimo;
-                            }
-                            break;
-                        case 1:
-                            foreach (SaleProduct product in SearchedProducts)
-                            {
-                                product.DisplayPrice = product.precioDistribuidor;
-                            }
-                            break;
-                        case 2:
-                            foreach (SaleProduct product in SearchedProducts)
-                            {
-                                product.DisplayPrice = product.precioPublico;
-                            }
-                            break;
+                        switch (PriceType)
+                        {
+                            case 0:
+                                foreach (SaleProduct product in SearchedProducts)
+                                {
+                                    product.DisplayPrice = product.precioPublico;
+                                }
+                                break;
+                            case 1:
+                                foreach (SaleProduct product in SearchedProducts)
+                                {
+                                    product.DisplayPrice = product.precioDistribuidor;
+                                }
+                                break;
+                            case 2:
+                                foreach (SaleProduct product in SearchedProducts)
+                                {
+                                    product.DisplayPrice = product.precioMinimo;
+                                }
+                                break;
+                        }
                     }
                 }
-                if (SaledProducts.Count > 0)
+                if(SaledProducts!=null)
                 {
-                    switch (PriceType)
+                    if (SaledProducts.Count > 0)
                     {
-                        case 0:
-                            foreach (SaleProduct product in SaledProducts)
-                            {
-                                product.DisplayPrice = product.precioMinimo;
-                            }
-                            break;
-                        case 1:
-                            foreach (SaleProduct product in SaledProducts)
-                            {
-                                product.DisplayPrice = product.precioDistribuidor;
-                            }
-                            break;
-                        case 2:
-                            foreach (SaleProduct product in SaledProducts)
-                            {
-                                product.DisplayPrice = product.precioPublico;
-                            }
-                            break;
+                        switch (PriceType)
+                        {
+                            case 0:
+                                foreach (SaleProduct product in SaledProducts)
+                                {
+                                    product.DisplayPrice = product.precioPublico;
+                                }
+                                break;
+                            case 1:
+                                foreach (SaleProduct product in SaledProducts)
+                                {
+                                    product.DisplayPrice = product.precioDistribuidor;
+                                }
+                                break;
+                            case 2:
+                                foreach (SaleProduct product in SaledProducts)
+                                {
+                                    product.DisplayPrice = product.precioMinimo;
+                                }
+                                break;
+                        }
                     }
+                    GetSubtotal();
                 }
-                GetSubtotal();
+                
             }
         }
 

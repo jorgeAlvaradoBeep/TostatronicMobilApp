@@ -1,8 +1,8 @@
 ﻿using System;
 namespace Ventas_Tostatronic.Models.ProductsMFF
 {
-	public class ProductBase
-	{
+	public class ProductBase: Services.BaseNotifyPropertyChanged
+    {
         public string codigo { get; set; }
         public string nombre { get; set; }
         public int existencia { get; set; }
