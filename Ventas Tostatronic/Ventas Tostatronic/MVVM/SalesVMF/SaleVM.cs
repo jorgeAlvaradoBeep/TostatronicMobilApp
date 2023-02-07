@@ -145,7 +145,9 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
                 {
                     if (string.IsNullOrEmpty(SelectedProduct.nombre))
                         return;
+                    SelectedProduct.cantidadComprada = 1;
                     CompleteSale.SaledProducts.Add(SelectedProduct);
+                    CompleteSale.GetSubtotal();
                     //SelectedProduct = null;
                     SearchPredictionText = string.Empty;
                 }

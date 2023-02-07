@@ -1,16 +1,16 @@
 ﻿<Properties StartupConfiguration="{65CFAD9E-BBD2-4CCA-B325-125D2066970C}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Ventas Tostatronic/Views/SalesVF/SaleV.xaml.cs">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Ventas_220Tostatronic PreferredExecutionTarget="Android.pixel_5_-_api_33" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Ventas Tostatronic/MVVM/SalesVMF/SaleVM.cs">
     <Files>
-      <File FileName="Ventas Tostatronic/Views/SalesVF/SaleV.xaml" Line="139" Column="108" />
-      <File FileName="Ventas Tostatronic/Views/SalesVF/SaleV.xaml.cs" Line="47" Column="47" />
-      <File FileName="Ventas Tostatronic/MVVM/SalesVMF/SaleVM.cs" Line="103" Column="25" />
-      <File FileName="Ventas Tostatronic/Models/SalesMF/CompleteSaleM.cs" Line="141" Column="28" />
-      <File FileName="Ventas Tostatronic/Services/URLData.cs" Line="12" Column="41" />
-      <File FileName="Ventas Tostatronic/Models/ProductsMFF/SaleProduct.cs" />
-      <File FileName="Ventas Tostatronic/Models/ProductsMFF/ProductBase.cs" />
-      <File FileName="Ventas Tostatronic/MVVM/SalesVMF/SaleCommands/UpdateProductsInfoCommand.cs" Line="9" Column="41" />
-      <File FileName="Ventas Tostatronic/MVVM/SalesVMF/SaleCommands/AllowSearchClientCommand.cs" Line="26" Column="6" />
+      <File FileName="Ventas Tostatronic/Views/SalesVF/SaleV.xaml.cs" Line="77" Column="8" />
+      <File FileName="Ventas Tostatronic/MVVM/SalesVMF/SaleVM.cs" Line="150" Column="48" />
+      <File FileName="Ventas Tostatronic/Models/SalesMF/CompleteSaleM.cs" Line="99" Column="17" />
+      <File FileName="Ventas Tostatronic/Views/SalesVF/SaleV.xaml" Line="188" Column="88" />
+      <File FileName="Ventas Tostatronic/MainPage.xaml" Line="35" Column="18" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -24,9 +24,7 @@
               </Node>
               <Node name="MVVM" expanded="True">
                 <Node name="SalesVMF" expanded="True">
-                  <Node name="SaleCommands" expanded="True">
-                    <Node name="AllowSearchClientCommand.cs" selected="True" />
-                  </Node>
+                  <Node name="SaleCommands" expanded="True" />
                 </Node>
               </Node>
               <Node name="Resources" expanded="True">
@@ -46,12 +44,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.Ventas_220Tostatronic PreferredExecutionTarget="Android.pixel_5_-_api_33" />
-  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
   <MonoDevelop.MonoDroid LastDeploySdkVersion="13.1.0.1" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="Android.pixel_5_-_api_33" />
 </Properties>
