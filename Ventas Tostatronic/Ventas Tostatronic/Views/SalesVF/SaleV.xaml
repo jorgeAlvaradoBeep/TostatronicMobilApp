@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ventas_Tostatronic.Views.SalesVF.SaleV"
+             Title="Ventas"
+             xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
+             Background="#000000">
+
+    <telerik:RadBusyIndicator x:Name="busyIndicator"
+                                  IsBusy="{Binding GettingData}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+                <RowDefinition Height="130"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <telerik:RadButton x:Name="btnclient"
+                                   Text="Seleccionar cliente..."
+                                   TextColor="#1976D2"
+                                   Background="White"
+                                   BorderColor="#1976D2"
+                                   BorderThickness="2"
+                                   Grid.Row="0"
+                                   IsVisible="{Binding SearClientButton}"
+                                   Margin="5"
+                                   Command="{Binding AllowSearchClientCommand}"/>
+
+            <telerik:RadAutoComplete x:Name="txtAutoComplete"
+                                         Grid.Row="0"
+                                         Margin="5"
+                                         Placeholder="Escriba Nombre o RFC de Cliente"
+                                         IsVisible="{Binding SearClientVisibility}"
+                                         ItemsSource="{Binding Clients}"
+                                         TextSearchPath="SerachProperty"
+                                         CompletionMode="Contains"
+                                         SuggestionItemSelected="txtAutoComplete_SuggestionItemSelected"/>
+
+            <telerik:RadComboBox x:Name="cmbPriceType"
+                                     SelectedIndex="{Binding CompleteSale.PriceType, Mode=TwoWay}"
+                                     IsVisible="{Binding ActivateSaleControls}"
+                                     Grid.Row="1"
+                                     Margin="5">
+                <telerik:RadComboBox.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Precio Publico</x:String>
+                        <x:String>Precio Distribuidor</x:String>
+                        <x:String>Precio Minimo</x:String>
+                    </x:Array>
+                </telerik:RadComboBox.ItemsSource>
+            </telerik:RadComboBox>
+            <HorizontalStackLayout Grid.Row="2"
+                                       IsVisible="{Binding ActivateSaleControls}">
+                <telerik:RadEntry x:Name="txtProducts"
+                                      Margin="5"
+                                      Placeholder="Escriba Nombre o código de producto"
+                                      Text="{Binding SearchPredictionText, Mode=TwoWay}"/>
+                <ImageButton x:Name="btnUpdateProduct"
+                                 Margin="5"
+                                 CornerRadius="3"
+                                 WidthRequest="30"
+                                 HeightRequest="30"
+                                 Background="#FFFFFF"
+                                 Aspect="AspectFit"
+                                 Source="reload.png">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Focused">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter Property="Scale" Value="0.8" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </ImageButton>
+            </HorizontalStackLayout>
+            <telerik:RadListView x:Name="lstSaledProducts"
+                                     ItemsSource="{Binding CompleteSale.SaledProducts}"
+                                     Grid.Row="3">
+                <telerik:RadListView.ItemTemplate>
+                    <DataTemplate>
+                        <telerik:ListViewTemplateCell>
+                            <telerik:ListViewTemplateCell.View>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <HorizontalStackLayout Margin="10, 10, 10, 0">
+                                        <Label Text="{Binding nombre}"
+                                                   FontSize="16"
+                                                   FontAttributes="Bold"
+                                                   TextColor="Black"
+                                                   VerticalOptions="Center" />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Grid.Row="1"
+                                                               Margin="10, 0, 10, 10">
+                                        <Label Text="{Binding codigo}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Grid.Row="2"
+                                                               Margin="10, 0, 10, 10">
+                                        <Label Text=" Existencias: "
+                                                   FontSize="13"
+                                                   FontAttributes="Bold"
+                                                   TextColor="Gray" />
+                                        <Label Text="{Binding existencia}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
+                                        <Label Text="{Binding DisplayPrice, StringFormat='{}Precio: {0:c}'}"
+                                                   FontSize="13"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray" />
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Grid.Row="3"
+                                                               Margin="10, 0, 10, 10">
+                                        <telerik:RadNumericInput x:Name="txtCantidad"
+                                                                     AutomationId="numericInput"
+                                                                     Value="{Binding cantidadComprada, Mode=TwoWay}"
+                                                                     Minimum="1"
+                                                                     ValueChanged="txtCantidad_ValueChanged"/>
+                                        <Label Text="{Binding Subtotal, StringFormat='{}Subtotal: {0:c}'}"
+                                                   FontSize="18"
+                                                   FontAttributes="Italic"
+                                                   TextColor="Gray"
+                                                   VerticalTextAlignment="Center"/>
+                                    </HorizontalStackLayout>
+                                </Grid>
+                            </telerik:ListViewTemplateCell.View>
+                        </telerik:ListViewTemplateCell>
+                    </DataTemplate>
+                </telerik:RadListView.ItemTemplate>
+            </telerik:RadListView>
+            <CollectionView IsVisible="{Binding SearchResultListDisplay}"
+                                ItemsSource="{Binding SearchResultList}"
+                                Margin="5"
+                                SelectionMode="Single"
+                                SelectedItem="{Binding SelectedProduct, Mode=TwoWay}"
+                                MaximumHeightRequest="300"
+                                Grid.Row="3"
+                                BackgroundColor="White">
+                <CollectionView.ItemTemplate >
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <HorizontalStackLayout Margin="10, 10, 10, 0">
+                                <Label Text="{Binding nombre}"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                            TextColor="Black"
+                                            VerticalOptions="Center" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="1"
+                                                        Margin="10, 0, 10, 10">
+                                <Label Text="{Binding codigo}"
+                                            FontSize="13"
+                                            FontAttributes="Italic"
+                                            TextColor="Gray" />
+                            </HorizontalStackLayout>
+                            <HorizontalStackLayout Grid.Row="2"
+                                                        Margin="10, 0, 10, 10">
+                                <Label Text=" Existencias: "
+                                            FontSize="13"
+                                            FontAttributes="Bold"
+                                            TextColor="Gray" />
+                                <Label Text="{Binding existencia}"
+                                            FontSize="13"
+                                            FontAttributes="Italic"
+                                            TextColor="Gray" />
+                                <Label Text="{Binding DisplayPrice, StringFormat='{} Precio: {0:c}'}"
+                                            FontSize="13"
+                                            FontAttributes="Italic"
+                                            TextColor="Gray" />
+                            </HorizontalStackLayout>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            <VerticalStackLayout Grid.Row="4"
+                                     IsVisible="{Binding ActivateSaleControls}"
+                                     Margin="5"
+                                     HorizontalOptions="Center">
+                <HorizontalStackLayout Grid.Row="4">
+                    <Label Text="Necesita factura?"/>
+                    <telerik:RadCheckBox x:Name="checkbox"
+                                         IsChecked="{Binding NeedFactura,Mode=TwoWay}"/>
+                </HorizontalStackLayout>
+
+                <Label Text="{Binding CompleteSale.SubTotal, StringFormat='{}Subtotal: {0:c}'}"
+                           HorizontalOptions="Center"
+                           FontSize="20"/>
+                <Label Text="{Binding CompleteSale.IVA, StringFormat='{}IVA: {0:c}'}"
+                           HorizontalOptions="Center"
+                           FontSize="20"/>
+                <Label Text="{Binding CompleteSale.Total, StringFormat='{}Total: {0:c}'}"
+                           HorizontalOptions="Center"
+                           FontSize="20"/>
+
+            </VerticalStackLayout>
+
+        </Grid>
+    </telerik:RadBusyIndicator>
+</ContentPage>

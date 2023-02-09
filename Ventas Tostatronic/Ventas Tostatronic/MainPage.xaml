@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ventas_Tostatronic.MainPage">
+
+    <CollectionView ItemsSource="{Binding Menus}"
+                    ItemsLayout="VerticalGrid, 2"
+                    Margin="10"
+                    SelectionMode="Single"
+                    SelectedItem="{Binding SelectedOption, Mode=TwoWay}"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center">
+    <CollectionView.ItemTemplate >
+        <DataTemplate>
+            <Grid Padding="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="80" />
+                    <RowDefinition Height="80" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" />
+                </Grid.ColumnDefinitions>
+                <ImageButton Grid.RowSpan="2"
+                             Grid.ColumnSpan="2"
+                             Source="{Binding ImageUrl.Source}"
+                             Aspect="AspectFill"
+                             HeightRequest="140"
+                             WidthRequest="140">
+                </ImageButton>
+            </Grid>
+        </DataTemplate>
+    </CollectionView.ItemTemplate>
+</CollectionView>
+
+</ContentPage>
+
