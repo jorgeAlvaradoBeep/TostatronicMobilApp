@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ItemGroup>
-    <_BindingLibraryLinkWith Include="/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/obj/Debug/net7.0-maccatalyst/maccatalyst-x64/linker-cache/TelerikUI.a">
-      <ForceLoad>true</ForceLoad>
-      <Assembly>Telerik.MacCatalyst</Assembly>
-    </_BindingLibraryLinkWith>
-  </ItemGroup>
-</Project>

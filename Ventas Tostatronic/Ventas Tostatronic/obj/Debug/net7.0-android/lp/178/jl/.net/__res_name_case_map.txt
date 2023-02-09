@@ -1,2 +1,0 @@
-Platforms/Android/Resources/Layout/radmauientry.xml;layout/radmauientry.xml
-Platforms/Android/Resources/Drawable/entry_clear_button.xml;drawable/entry_clear_button.xml
