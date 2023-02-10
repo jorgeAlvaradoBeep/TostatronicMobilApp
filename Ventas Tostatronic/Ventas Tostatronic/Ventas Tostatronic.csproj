@@ -72,7 +72,6 @@
 	  <None Remove="Resources\Images\reload.png" />
 	</ItemGroup>
 	<ItemGroup>
-	  <Folder Include="MVVM\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="MVVM\Menu\" />
 	  <Folder Include="Services\" />
@@ -80,8 +79,6 @@
 	  <Folder Include="MVVM\Menu\MenuCommands\" />
 	  <Folder Include="Views\" />
 	  <Folder Include="Views\SalesVF\" />
-	  <Folder Include="MVVM\SalesVMF\" />
-	  <Folder Include="MVVM\SalesVMF\SaleCommands\" />
 	  <Folder Include="Models\Clients\" />
 	  <Folder Include="Models\ProductsMFF\" />
 	  <Folder Include="Models\SalesMF\" />

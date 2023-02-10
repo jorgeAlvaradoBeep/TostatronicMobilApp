@@ -5,6 +5,12 @@
              Title="Ventas"
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
              Background="#000000">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Save"
+                     Command="{Binding SaveSaleCommand}"
+                     IsEnabled="{Binding ActivateSaleControls}"
+                     />
+    </ContentPage.ToolbarItems>
 
     <telerik:RadBusyIndicator x:Name="busyIndicator"
                                   IsBusy="{Binding GettingData}">
@@ -145,7 +151,7 @@
                     </DataTemplate>
                 </telerik:RadListView.ItemTemplate>
             </telerik:RadListView>
-            <CollectionView IsVisible="{Binding SearchResultListDisplay}"
+            <CollectionView     IsVisible="{Binding SearchResultListDisplay}"
                                 ItemsSource="{Binding SearchResultList}"
                                 Margin="5"
                                 SelectionMode="Single"

@@ -11,7 +11,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
 {
     public class SaleVM: BaseNotifyPropertyChanged
     {
-        IPageService pageService;
+        public IPageService pageService;
         #region Properties
         bool gettingData;
         public bool GettingData
@@ -153,6 +153,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
                         return;
                     }
                     SelectedProduct.cantidadComprada = 1;
+                    SelectedProduct.idProducto = SelectedProduct.codigo;
                     CompleteSale.SaledProducts.Add(SelectedProduct);
                     CompleteSale.GetSubtotal();
                     //SelectedProduct = null;
@@ -190,6 +191,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
         #region PropertyCommands
         public AllowSearchClientCommand AllowSearchClientCommand { get; set; }
         public UpdateProductsInfoCommand UpdateProductsInfoCommand { get; set; }
+        public SaveSaleCommand SaveSaleCommand { get; set; }
         #endregion
         public SaleVM(PageService ps)
         {
@@ -202,7 +204,10 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
             SearClientButton = true;
             AllowSearchClientCommand = new AllowSearchClientCommand(this);
             UpdateProductsInfoCommand = new UpdateProductsInfoCommand(this);
+            SaveSaleCommand = new SaveSaleCommand(this);
             CompleteSale = new CompleteSaleM();
+            CompleteSale.FechaDeVenta = DateTime.Now.ToString();
+            CompleteSale.SalerID = 1;
             SearchResultList = new List<SaleProduct>();
             CompleteSale.PriceType = 2;
             CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();

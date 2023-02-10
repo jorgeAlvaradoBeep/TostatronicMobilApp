@@ -174,6 +174,8 @@ namespace Ventas_Tostatronic.Models.SalesMF
             set { SetValue(ref salerID, value); }
         }
 
+        public string FechaDeVenta { get; set; }
+
         //public PaymentM Payment { get; set; }
 
         public string SetIVAPrices()
