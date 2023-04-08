@@ -12,34 +12,34 @@ build_property.EnableSingleFileAnalyzer = true
 build_property.EnableTrimAnalyzer = false
 build_property.IncludeAllContentForSelfExtract = 
 build_property.RootNamespace = Ventas_Tostatronic
-build_property.ProjectDir = C:\Users\Tostatronic_Shop\source\repos\TostatronicMobilApp\Ventas Tostatronic\Ventas Tostatronic\
+build_property.ProjectDir = /Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/
 
-[C:/Users/Tostatronic_Shop/source/repos/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/App.xaml]
+[/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ventas_Tostatronic.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/Tostatronic_Shop/source/repos/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/MainPage.xaml]
+[/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ventas_Tostatronic.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[C:/Users/Tostatronic_Shop/source/repos/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Resources/Styles/Colors.xaml]
+[/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ventas_Tostatronic.Resources.Styles.Colors.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Colors.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[C:/Users/Tostatronic_Shop/source/repos/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Resources/Styles/Styles.xaml]
+[/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ventas_Tostatronic.Resources.Styles.Styles.xaml
-build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
-build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Styles.xaml
 
-[C:/Users/Tostatronic_Shop/source/repos/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Views/SalesVF/SaleV.xaml]
+[/Users/tostatronic/Documents/GitHub/TostatronicMobilApp/Ventas Tostatronic/Ventas Tostatronic/Views/SalesVF/SaleV.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Ventas_Tostatronic.Views.SalesVF.SaleV.xaml
-build_metadata.AdditionalFiles.TargetPath = Views\SalesVF\SaleV.xaml
-build_metadata.AdditionalFiles.RelativePath = Views\SalesVF\SaleV.xaml
+build_metadata.AdditionalFiles.TargetPath = Views/SalesVF/SaleV.xaml
+build_metadata.AdditionalFiles.RelativePath = Views/SalesVF/SaleV.xaml

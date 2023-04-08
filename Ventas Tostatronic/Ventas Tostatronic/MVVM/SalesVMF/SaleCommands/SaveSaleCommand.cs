@@ -46,10 +46,11 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF.SaleCommands
             }
 
             VM.GettingData = true;
-            Response rmp = await WebService.InsertData(VM.CompleteSale,URLData.ventas);
+            //VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString();
+            Response rmp = await WebService.InsertData(VM.CompleteSale,URLData.quoteNET);
             if (rmp.succes)
             {
-                await VM.pageService.DisplayAlert("Exito", $"Venta #{rmp.message} agregada correctamente", "Ok");
+                await VM.pageService.DisplayAlert("Exito", $"Cotización #{rmp.message} agregada correctamente", "Ok");
                 VM.SearClientVisibility = false;
                 VM.SeeSaleControls = false;
                 VM.ActivateSaleControls = false;
@@ -57,7 +58,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF.SaleCommands
                 VM.SearClientButton = true;
                 VM.CompleteSale.SaledProducts.Clear();
                 VM.CompleteSale = new CompleteSaleM();
-                VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString();
+                VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString("yyyy-mm-dd HH:mm:ss");
                 VM.CompleteSale.SalerID = 1;
                 VM.CompleteSale.PriceType = 2;
                 VM.CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();

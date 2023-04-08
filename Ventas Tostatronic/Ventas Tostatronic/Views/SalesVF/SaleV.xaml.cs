@@ -58,7 +58,6 @@ public partial class SaleV : ContentPage
     {
         vm.CompleteSale.GetSubtotal();
     }
-
     /*async void lstSearchResults_ItemTapped(System.Object sender, Telerik.Maui.Controls.Compatibility.DataControls.ListView.ItemTapEventArgs e)
     {
         SaleProduct sP = (SaleProduct)e.Item;

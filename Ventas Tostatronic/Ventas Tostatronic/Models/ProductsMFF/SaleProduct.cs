@@ -32,9 +32,13 @@ namespace Ventas_Tostatronic.Models.ProductsMFF
             }
             set
             {
-                SetValue(ref displayPrice, value);
+                if(value >= (precioMinimo/1.17))
+                    SetValue(ref displayPrice, value); 
+                else
+                    SetValue(ref displayPrice, precioMinimo);
                 precioAlMomento = DisplayPrice;
                 Subtotal = DisplayPrice * cantidadComprada;
+
             }
         }
         double subtotal;

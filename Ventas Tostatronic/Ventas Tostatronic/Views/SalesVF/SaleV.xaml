@@ -4,7 +4,7 @@
              x:Class="Ventas_Tostatronic.Views.SalesVF.SaleV"
              Title="Ventas"
              xmlns:telerik="http://schemas.telerik.com/2022/xaml/maui"
-             Background="#000000">
+             Background="#FFFF">
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save"
                      Command="{Binding SaveSaleCommand}"
@@ -116,29 +116,31 @@
                                                    FontSize="13"
                                                    FontAttributes="Italic"
                                                    TextColor="Gray" />
-                                    </HorizontalStackLayout>
-                                    <HorizontalStackLayout Grid.Row="2"
-                                                               Margin="10, 0, 10, 10">
                                         <Label Text=" Existencias: "
-                                                   FontSize="13"
-                                                   FontAttributes="Bold"
-                                                   TextColor="Gray" />
+                                                FontSize="13"
+                                                FontAttributes="Bold"
+                                                TextColor="Gray"
+                                                Margin="10,0,0,0"/>
                                         <Label Text="{Binding existencia}"
                                                    FontSize="13"
                                                    FontAttributes="Italic"
-                                                   TextColor="Gray" />
-                                        <Label Text="{Binding DisplayPrice, StringFormat='{}Precio: {0:c}'}"
-                                                   FontSize="13"
-                                                   FontAttributes="Italic"
-                                                   TextColor="Gray" />
+                                                   TextColor="Gray"
+                                                   Margin="5,0,0,0"/>
+                                    </HorizontalStackLayout>
+                                    <HorizontalStackLayout Grid.Row="2"
+                                                               Margin="10, 0, 10, 10">
+                                        <telerik:RadNumericInput x:Name="txtPrecio"
+                                                                AutomationId="numericInput"
+                                                                Value="{Binding DisplayPrice, Mode=TwoWay}"
+                                                                ValueChanged="txtCantidad_ValueChanged"/>
                                     </HorizontalStackLayout>
                                     <HorizontalStackLayout Grid.Row="3"
                                                                Margin="10, 0, 10, 10">
                                         <telerik:RadNumericInput x:Name="txtCantidad"
-                                                                     AutomationId="numericInput"
-                                                                     Value="{Binding cantidadComprada, Mode=TwoWay}"
-                                                                     Minimum="1"
-                                                                     ValueChanged="txtCantidad_ValueChanged"/>
+                                                                AutomationId="numericInput"
+                                                                Value="{Binding cantidadComprada, Mode=TwoWay}"
+                                                                Minimum="1"
+                                                                ValueChanged="txtCantidad_ValueChanged"/>
                                         <Label Text="{Binding Subtotal, StringFormat='{}Subtotal: {0:c}'}"
                                                    FontSize="18"
                                                    FontAttributes="Italic"
