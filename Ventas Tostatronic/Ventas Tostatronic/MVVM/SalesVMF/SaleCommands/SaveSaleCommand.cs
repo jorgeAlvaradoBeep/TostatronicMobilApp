@@ -58,7 +58,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF.SaleCommands
                 VM.SearClientButton = true;
                 VM.CompleteSale.SaledProducts.Clear();
                 VM.CompleteSale = new CompleteSaleM();
-                VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString("yyyy-mm-dd HH:mm:ss");
+                VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString();
                 VM.CompleteSale.SalerID = 1;
                 VM.CompleteSale.PriceType = 2;
                 VM.CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();

@@ -73,20 +73,6 @@
                                  Background="#FFFFFF"
                                  Aspect="AspectFit"
                                  Source="reload.png">
-                    <VisualStateManager.VisualStateGroups>
-                        <VisualStateGroup x:Name="CommonStates">
-                            <VisualState x:Name="Focused">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale" Value="1" />
-                                </VisualState.Setters>
-                            </VisualState>
-                            <VisualState x:Name="Pressed">
-                                <VisualState.Setters>
-                                    <Setter Property="Scale" Value="0.8" />
-                                </VisualState.Setters>
-                            </VisualState>
-                        </VisualStateGroup>
-                    </VisualStateManager.VisualStateGroups>
                 </ImageButton>
             </HorizontalStackLayout>
             <telerik:RadListView x:Name="lstSaledProducts"

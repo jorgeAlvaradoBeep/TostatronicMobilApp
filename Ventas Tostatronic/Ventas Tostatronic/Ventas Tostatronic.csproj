@@ -33,7 +33,6 @@
 	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
@@ -56,6 +55,8 @@
 	  <None Remove="MVVM\" />
 	  <None Remove="Models\" />
 	  <None Remove="MVVM\Menu\" />
+	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
 	  <None Remove="Services\" />
 	  <None Remove="Models\MenuMFF\" />
 	  <None Remove="Resources\Images\ventasmenu.png" />
@@ -90,6 +91,10 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Remove="Resources\Images\ventasmenu.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiIcon Include="Resources\AppIcon\appicon.svg" />
+	  <MauiIcon Include="Resources\AppIcon\appiconfg.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiXaml Update="Views\SalesVF\SaleV.xaml">

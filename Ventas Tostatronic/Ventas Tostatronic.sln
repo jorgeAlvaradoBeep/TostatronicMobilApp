@@ -16,6 +16,7 @@ Global
 		{65CFAD9E-BBD2-4CCA-B325-125D2066970C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{65CFAD9E-BBD2-4CCA-B325-125D2066970C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{65CFAD9E-BBD2-4CCA-B325-125D2066970C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65CFAD9E-BBD2-4CCA-B325-125D2066970C}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
