@@ -51,20 +51,21 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF.SaleCommands
             if (rmp.succes)
             {
                 await VM.pageService.DisplayAlert("Exito", $"Cotización #{rmp.message} agregada correctamente", "Ok");
-                VM.SearClientVisibility = false;
-                VM.SeeSaleControls = false;
-                VM.ActivateSaleControls = false;
-                VM.SearchResultListDisplay = false;
-                VM.SearClientButton = true;
-                VM.CompleteSale.SaledProducts.Clear();
-                VM.CompleteSale = new CompleteSaleM();
-                VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString();
-                VM.CompleteSale.SalerID = 1;
-                VM.CompleteSale.PriceType = 2;
-                VM.CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();
-                VM.CompleteSale.SearchedProducts = new List<SaleProduct>();
-                await VM.getProducts();
-                VM.NeedFactura = false;
+                await VM.pageService.PopAsync();
+                //VM.SearClientVisibility = false;
+                //VM.SeeSaleControls = false;
+                //VM.ActivateSaleControls = false;
+                //VM.SearchResultListDisplay = false;
+                //VM.SearClientButton = true;
+                //VM.CompleteSale.SaledProducts.Clear();
+                //VM.CompleteSale = new CompleteSaleM();
+                //VM.CompleteSale.FechaDeVenta = DateTime.Now.ToString();
+                //VM.CompleteSale.SalerID = 1;
+                ////VM.CompleteSale.PriceType = 2;
+                //VM.CompleteSale.SaledProducts = new ObservableCollection<SaleProduct>();
+                //VM.CompleteSale.SearchedProducts = new List<SaleProduct>();
+                //await VM.getProducts();
+                //VM.NeedFactura = false;
             }
             else
             {

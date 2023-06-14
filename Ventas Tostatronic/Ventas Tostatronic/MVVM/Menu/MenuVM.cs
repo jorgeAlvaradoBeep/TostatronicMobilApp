@@ -1,5 +1,6 @@
 ﻿using System;
 using Ventas_Tostatronic.Models.MenuMFF;
+using Ventas_Tostatronic.MVVM.Menu.MenuCommand;
 using Ventas_Tostatronic.Services;
 using Ventas_Tostatronic.Views.SalesVF;
 
@@ -33,13 +34,17 @@ namespace Ventas_Tostatronic.MVVM.Menu
                 }
             }
         }
+
+        public ViewSelectionCommand ViewSelectionCommand { get; set; }
         #endregion
 
         public MenuVM(PageService pageService)
 		{
 			this.pageService = pageService;
 			Menus = setMenus();
-		}
+            ViewSelectionCommand = new ViewSelectionCommand(this);
+
+        }
 
         List<MenuM> setMenus()
 		{

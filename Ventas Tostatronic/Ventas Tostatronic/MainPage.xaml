@@ -3,36 +3,27 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Ventas_Tostatronic.MainPage">
 
-    <CollectionView ItemsSource="{Binding Menus}"
-                    ItemsLayout="VerticalGrid, 2"
-                    Margin="10"
-                    SelectionMode="Single"
-                    SelectedItem="{Binding SelectedOption, Mode=TwoWay}"
-                    HorizontalOptions="Center"
-                    VerticalOptions="Center">
-    <CollectionView.ItemTemplate >
-        <DataTemplate>
-            <Grid Padding="10">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="80" />
-                    <RowDefinition Height="80" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="80" />
-                    <ColumnDefinition Width="80" />
-                </Grid.ColumnDefinitions>
-                <ImageButton Grid.RowSpan="2"
-                             Grid.ColumnSpan="2"
-                             Source="{Binding ImageUrl.Source}"
-                             Aspect="AspectFill"
-                             HeightRequest="140"
-                             WidthRequest="140">
-                </ImageButton>
-            </Grid>
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
-</CollectionView>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal" 
+                     Spacing="40"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="CenterAndExpand">
+            <ImageButton x:Name="option1Button" 
+                         Source="https://lh3.googleusercontent.com/pw/AMWts8ACJd8mKgU93fQn2jE3ZJCYx6SEiELA16T-6tCcR1TpWrnjAcYjdmMYb89OZnqWwic15noq-75I4DAAosckbSYmOVXEVnETRFTqagGptL7tnTJzsE593WzEnzEjl-IXhktqSJgKQsZh7CCDl9EtCjHV=s512-no?authuser=0" 
+                         Command="{Binding ViewSelectionCommand}"
+                         CommandParameter="Ventas"
+                         HeightRequest="200"
+                         WidthRequest="200">
+            </ImageButton>
+            <ImageButton x:Name="option2Button" 
+                         Source="https://lh3.googleusercontent.com/pw/AMWts8AdfHya0TqszAA41wiDcb39AtQ_vFeutDNFcLlxigglc0PDGSH4HcgRIM3mxD7IdyZbaY9-qva5ySE16FpD3WN4o-2jE3aRfxOPBg6QLl1KtN6rjgPxLFYXkR97zajDwIt12QAmFqBoJ2OWmDUlu3BF=s512-no?authuser=0" 
+                         Command="{Binding ViewSelectionCommand}"
+                         CommandParameter="Cotizacion"
+                         HeightRequest="200"
+                         WidthRequest="200">
+            </ImageButton>
+        </StackLayout>
+    </StackLayout>
 
 </ContentPage>
 

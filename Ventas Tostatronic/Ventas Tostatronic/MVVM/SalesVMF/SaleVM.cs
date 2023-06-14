@@ -206,7 +206,7 @@ namespace Ventas_Tostatronic.MVVM.SalesVMF
             UpdateProductsInfoCommand = new UpdateProductsInfoCommand(this);
             SaveSaleCommand = new SaveSaleCommand(this);
             CompleteSale = new CompleteSaleM();
-            CompleteSale.FechaDeVenta = DateTime.Now.ToString();
+            CompleteSale.FechaDeVenta = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
             CompleteSale.SalerID = 1;
             SearchResultList = new List<SaleProduct>();
             CompleteSale.PriceType = 2;

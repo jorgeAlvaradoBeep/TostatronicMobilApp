@@ -4,7 +4,7 @@ AreAnyAssembliesTrimmed=true
 				AOTCompiler=
 				AOTOutputDirectory=obj\Release\net7.0-maccatalyst\maccatalyst-x64\nativelibraries/aot-output/
 				AppBundleManifestPath=bin\Release\net7.0-maccatalyst\maccatalyst-x64\Ventas Tostatronic.app\Contents/Info.plist
-				CacheDirectory=C:\Users\Tostatronic\Source\Repos\TostatronicMobilApp\Ventas Tostatronic\Ventas Tostatronic\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-cache
+				CacheDirectory=C:\Users\Tostatronic\source\repos\TostatronicMobilApp\Ventas Tostatronic\Ventas Tostatronic\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-cache
 				
 				Debug=false
 				DeploymentTarget=
@@ -183,7 +183,7 @@ FrameworkAssembly=System.Private.CoreLib
 				Interpreter=
 				IntermediateLinkDir=obj\Release\net7.0-maccatalyst\maccatalyst-x64\linked\
 				InvariantGlobalization=false
-				ItemsDirectory=C:\Users\Tostatronic\Source\Repos\TostatronicMobilApp\Ventas Tostatronic\Ventas Tostatronic\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-items
+				ItemsDirectory=C:\Users\Tostatronic\source\repos\TostatronicMobilApp\Ventas Tostatronic\Ventas Tostatronic\obj\Release\net7.0-maccatalyst\maccatalyst-x64\linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=
 				LibMonoLinkMode=dylib

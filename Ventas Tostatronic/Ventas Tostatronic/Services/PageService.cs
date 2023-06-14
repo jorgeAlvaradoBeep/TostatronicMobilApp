@@ -17,6 +17,10 @@ namespace Ventas_Tostatronic.Services
         {
             await Application.Current.MainPage.Navigation.PushAsync(page);
         }
+        public async Task PopAsync()
+        {
+            await Application.Current.MainPage.Navigation.PopToRootAsync(true);
+        }
     }
 }
 

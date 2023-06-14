@@ -8,8 +8,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Save"
                      Command="{Binding SaveSaleCommand}"
-                     IsEnabled="{Binding ActivateSaleControls}"
-                     />
+                     IsEnabled="{Binding ActivateSaleControls}"/>
     </ContentPage.ToolbarItems>
 
     <telerik:RadBusyIndicator x:Name="busyIndicator"
@@ -37,14 +36,14 @@
                                    Command="{Binding AllowSearchClientCommand}"/>
 
             <telerik:RadAutoComplete x:Name="txtAutoComplete"
-                                         Grid.Row="0"
-                                         Margin="5"
-                                         Placeholder="Escriba Nombre o RFC de Cliente"
-                                         IsVisible="{Binding SearClientVisibility}"
-                                         ItemsSource="{Binding Clients}"
-                                         TextSearchPath="SerachProperty"
-                                         CompletionMode="Contains"
-                                         SuggestionItemSelected="txtAutoComplete_SuggestionItemSelected"/>
+                                    Grid.Row="0"
+                                    Margin="5"
+                                    Placeholder="Escriba Nombre o RFC de Cliente"
+                                    IsVisible="{Binding SearClientVisibility}"
+                                    ItemsSource="{Binding Clients}"
+                                    TextSearchPath="SerachProperty"
+                                    CompletionMode="Contains"
+                                    SuggestionItemSelected="txtAutoComplete_SuggestionItemSelected"/>
 
             <telerik:RadComboBox x:Name="cmbPriceType"
                                      SelectedIndex="{Binding CompleteSale.PriceType, Mode=TwoWay}"
@@ -76,7 +75,7 @@
                 </ImageButton>
             </HorizontalStackLayout>
             <telerik:RadListView x:Name="lstSaledProducts"
-                                     ItemsSource="{Binding CompleteSale.SaledProducts}"
+                                     ItemsSource="{Binding CompleteSale.SaledProducts, Mode=TwoWay}"
                                      Grid.Row="3">
                 <telerik:RadListView.ItemTemplate>
                     <DataTemplate>
